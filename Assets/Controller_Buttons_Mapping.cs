@@ -20,13 +20,13 @@ public class Controller_Buttons_Mapping : MonoBehaviour
     {
          if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
          {
-            Debug.Log("Primary trigger triggered");
             OnTriggerPressed();
+        } else if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger))
+        {
+            OnTriggerReleased();
         }
     }
 
-
-    //Sara hack
     private void OnTriggerPressed()
     {
         ControllerInteractionEventArgs e = new ControllerInteractionEventArgs
@@ -39,6 +39,20 @@ public class Controller_Buttons_Mapping : MonoBehaviour
             touchpadTwoAngle = 1
         };
         ControllerEvents.OnTriggerPressed(e);
+    }
+
+    private void OnTriggerReleased()
+    {
+        ControllerInteractionEventArgs e = new ControllerInteractionEventArgs
+        {
+            buttonPressure = 1,
+            controllerReference = new VRTK_ControllerReference(1),
+            touchpadAxis = new Vector2(0, -1),
+            touchpadAngle = 1,
+            touchpadTwoAxis = new Vector2(0, -1),
+            touchpadTwoAngle = 1
+        };
+        ControllerEvents.OnTriggerReleased(e);
     }
 }
 
