@@ -5,6 +5,6 @@ using UnityEngine;
 public class GameFacts_Apple : MonoBehaviour
 {
     public int WaterConsumption;
-    public bool suitableSweden;
-    public bool suitableJordan;
+    public bool ClimateSwedenOk;
+    public bool ClimateJordanOk;
 }
