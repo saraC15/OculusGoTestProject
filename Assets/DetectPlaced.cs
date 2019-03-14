@@ -9,7 +9,7 @@ public class DetectPlaced : MonoBehaviour
         GameObject placedObj = collision.gameObject;
         if (placedObj.tag == "Crop")
         {
-            Debug.Log("You placed " + placedObj.name);
+            Debug.Log("You placed " + placedObj.name + " on " + gameObject.name);
         } 
     }
 
@@ -18,7 +18,7 @@ public class DetectPlaced : MonoBehaviour
         GameObject removedObj = collision.gameObject;
         if (removedObj.tag == "Crop")
         {
-            Debug.Log("You removed " + removedObj.name);
+            Debug.Log("You removed " + removedObj.name + " from " + gameObject.name);
         }
     }
 }
