@@ -71,10 +71,44 @@ public class AtDoneClick : MonoBehaviour
                 allLowWater = allLowWater && (waterPerCalorie < lowThreshold);
             }
 
-            Debug.Log("Maximum number of crops selected: " + maximumAmountOfCropsSelected);
-            Debug.Log("Crops suite climate: " + cropsSuiteClimate);
-            Debug.Log("No high water: " + noHighWater);
-            Debug.Log("All low water: " + allLowWater);
+            int points = 0;
+            if (maximumAmountOfCropsSelected)
+            {
+                points++;
+            }
+            if (cropsSuiteClimate)
+            {
+                points++;
+            }
+            if (noHighWater || allLowWater)
+            {
+                points++;
+            }
+            if (allLowWater)
+            {
+                points++;
+            }
+
+            Debug.Log("You recieved " + points + "/4 points.");
+
+            if (!allLowWater)
+            {
+                Debug.Log("- You could have chosen more water efficient foods.");
+            }
+            if (!maximumAmountOfCropsSelected)
+            {
+                Debug.Log("- To make sure the market is not saturated you should pick");
+                Debug.Log("maximum amount of possible foods to produce.");
+            }
+            if (!cropsSuiteClimate)
+            {
+                Debug.Log("- Not all foods you selected suit the given climate.");
+            }
+            if (!noHighWater)
+            {
+                Debug.Log("- You have chosen one or more foods with a very high");
+                Debug.Log("water consumption.");
+            }
         }
     }
 
