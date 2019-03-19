@@ -331,13 +331,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 266276863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da708fd844a7e476aa48f9e79a67bbd5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bc5f30a812d24660b2bfb93041606a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaterConsumption: 21829
+  WaterConsumption: 16987
   ClimateSwedenOk: 1
   ClimateJordanOk: 1
-  CaloriesPerKg: 3320
+  CaloriesPerKg: 2110
 --- !u!1 &281810616
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 594979990}
   - component: {fileID: 594979994}
   - component: {fileID: 594979993}
-  - component: {fileID: 594979989}
+  - component: {fileID: 594979995}
   m_Layer: 0
   m_Name: Cucumber
   m_TagString: Crop
@@ -917,22 +917,6 @@ Transform:
   m_Father: {fileID: 1505966118}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: -24.658}
---- !u!114 &594979989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594979987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15e6d224131224e97ab0f511d6eeee29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WaterConsumption: 353
-  ClimateSwedenOk: 1
-  ClimateJordanOk: 1
-  CaloriesPerKg: 150
 --- !u!136 &594979990
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1041,6 +1025,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &594979995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594979987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc5f30a812d24660b2bfb93041606a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaterConsumption: 389
+  ClimateSwedenOk: 1
+  ClimateJordanOk: 1
+  CaloriesPerKg: 180
 --- !u!1 &625878557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 625878562}
   - component: {fileID: 625878564}
   m_Layer: 0
-  m_Name: Milk
+  m_Name: Cheese
   m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1194,13 +1194,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 625878557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 088acc25e1c7347159b7169c7d110b65, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bc5f30a812d24660b2bfb93041606a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaterConsumption: 1191
+  WaterConsumption: 6507
   ClimateSwedenOk: 1
   ClimateJordanOk: 1
-  CaloriesPerKg: 610
+  CaloriesPerKg: 2800
 --- !u!1 &703947731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,13 +2614,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1346722900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b9a8dc6dba9c461eaa09dede69379c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bc5f30a812d24660b2bfb93041606a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaterConsumption: 287
+  WaterConsumption: 316
   ClimateSwedenOk: 1
   ClimateJordanOk: 1
-  CaloriesPerKg: 770
+  CaloriesPerKg: 790
 --- !u!1001 &1354271087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2708,7 +2708,7 @@ GameObject:
   - component: {fileID: 1418040824}
   - component: {fileID: 1418040826}
   m_Layer: 0
-  m_Name: Blueberry
+  m_Name: Egg
   m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2781,7 +2781,7 @@ Transform:
   m_GameObject: {fileID: 1418040819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.38, y: -14.55, z: 10.73}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.2, y: 0.3166018, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1505966118}
   m_RootOrder: 1
@@ -2844,13 +2844,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1418040819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5330ebe9b36604a3a9413d151e9fbc10, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bc5f30a812d24660b2bfb93041606a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaterConsumption: 845
+  WaterConsumption: 3598
   ClimateSwedenOk: 1
-  ClimateJordanOk: 0
-  CaloriesPerKg: 570
+  ClimateJordanOk: 1
+  CaloriesPerKg: 1410
 --- !u!114 &1436511926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114770931033474782, guid: eb6748575a8fce346b19dff6cb1471ec,
@@ -3227,8 +3227,7 @@ GameObject:
   - component: {fileID: 1644970336}
   - component: {fileID: 1644970343}
   - component: {fileID: 1644970342}
-  - component: {fileID: 1644970341}
-  - component: {fileID: 1644970340}
+  - component: {fileID: 1644970344}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Crop
@@ -3309,42 +3308,6 @@ Transform:
   m_Father: {fileID: 1505966118}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1644970340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644970335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445b44dd1b121459691d046bbfb43211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WaterConsumption: 790
-  ClimateSwedenOk: 0
-  ClimateJordanOk: 1
-  CaloriesPerKg: 890
---- !u!114 &1644970341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644970335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abc4b5dd2be1cea4aaea2850b910d3f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  grabHighlight: {r: 0, g: 0, b: 0, a: 0}
-  useHighlight: {r: 0, g: 0, b: 0, a: 0}
-  objectToMonitor: {fileID: 1644970342}
-  objectToHighlight: {fileID: 0}
-  objectHighlighter: {fileID: 0}
-  objectToAffect: {fileID: 0}
 --- !u!114 &1644970342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3394,6 +3357,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1644970344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644970335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc5f30a812d24660b2bfb93041606a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaterConsumption: 871
+  ClimateSwedenOk: 0
+  ClimateJordanOk: 1
+  CaloriesPerKg: 1010
 --- !u!1 &1802937613
 GameObject:
   m_ObjectHideFlags: 0

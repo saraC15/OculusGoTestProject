@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameFacts_Cucumber : MonoBehaviour
+public class GameFacts_Apple : MonoBehaviour
 {
     public int WaterConsumption;
     public bool ClimateSwedenOk;

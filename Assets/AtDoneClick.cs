@@ -19,17 +19,17 @@ public class AtDoneClick : MonoBehaviour
 
         string JordanCropsString = "Crops added to Jordan are ";
 
-        foreach(var Crop in jordanCrops)
+        foreach(var crop in jordanCrops)
         {
-            JordanCropsString += Crop.name + " ";
+            JordanCropsString += crop.name + " ";
         }
         Debug.Log(JordanCropsString);
 
         string SwedenCropsString = "Crops added to Sweden are ";
 
-        foreach (var Crop in swedenCrops)
+        foreach (var crop in swedenCrops)
         {
-            SwedenCropsString += Crop.name + " ";
+            SwedenCropsString += crop.name + " ";
         }
         Debug.Log(SwedenCropsString);
 
@@ -46,14 +46,46 @@ public class AtDoneClick : MonoBehaviour
         }
         else
         {
-            //check if all crops suit the climate
+            List<GameFacts> swedenCropsFacts = GetCropFacts(swedenCrops);
+            List<GameFacts> jordanCropsFacts = GetCropFacts(jordanCrops);
 
-            //check if no high water consuming crops
+            bool maximumAmountOfCropsSelected = (swedenCropsFacts.Count == 3 && jordanCropsFacts.Count == 3);
 
-            //check if all crops have low water consumption
+            bool cropsSuiteClimate = true;
+            bool noHighWater = true;
+            bool allLowWater = true;
 
-            //check if maximum amount of crops have been recommended 
+            foreach (var cropFact in jordanCropsFacts)
+            {
+                int waterPerCalorie = cropFact.WaterConsumption / cropFact.CaloriesPerKg;
+                cropsSuiteClimate = cropsSuiteClimate && cropFact.ClimateJordanOk;
+                noHighWater = noHighWater && (waterPerCalorie < highThreshold);
+                allLowWater = allLowWater && (waterPerCalorie < lowThreshold);
+            }
 
+            foreach (var cropFact in swedenCropsFacts)
+            {
+                int waterPerCalorie = cropFact.WaterConsumption / cropFact.CaloriesPerKg;
+                cropsSuiteClimate = cropsSuiteClimate && cropFact.ClimateSwedenOk;
+                noHighWater = noHighWater && (waterPerCalorie < highThreshold);
+                allLowWater = allLowWater && (waterPerCalorie < lowThreshold);
+            }
+
+            Debug.Log("Maximum number of crops selected: " + maximumAmountOfCropsSelected);
+            Debug.Log("Crops suite climate: " + cropsSuiteClimate);
+            Debug.Log("No high water: " + noHighWater);
+            Debug.Log("All low water: " + allLowWater);
         }
+    }
+
+    private List<GameFacts> GetCropFacts(List<GameObject> cropObjects)
+    {
+        List<GameFacts> cropFacts = new List<GameFacts>();
+        foreach (GameObject crop in cropObjects)
+        {
+            cropFacts.Add(crop.GetComponent<GameFacts>());
+        }
+
+        return cropFacts;
     }
 }
